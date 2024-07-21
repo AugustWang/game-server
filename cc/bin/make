@@ -1,0 +1,9 @@
+#!/bin/sh
+#rm ebin/*.beam
+#cd ..
+#erl -s make all -s c q
+#!/bin/sh
+CUR_DIR=$(cd ${0%/*} && pwd) 
+cd ../$CUR_DIR/
+escript ./gen_protocol.erl
+./rebar compile

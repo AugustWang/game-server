@@ -1,0 +1,22 @@
+{
+	[
+		'src/*'
+		,'src/srv/*'
+		,'src/mod/*'
+		,'src/data/*'
+		,'src/tab/*'
+		,'src/patch/*'
+		,'src/lib/*'
+		,'src/lib/mysql/*'
+		,'src/lib/json/*'
+		,'test/*'
+		,'src/test/*'
+		,'src/robot/*'
+		,'src/crontab/*'
+	]
+	,[
+		debug_info
+		,{i, "include"}
+		,{outdir, "ebin"}
+	]
+}.

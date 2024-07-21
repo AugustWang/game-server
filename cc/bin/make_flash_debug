@@ -1,0 +1,20 @@
+#!/bin/bash
+DIR=/home/dev
+FLEX_SDK=/data/sdk_4.0
+PJ=$DIR/chuichui
+PUB=/home/dev/web/game
+#SEAL_DIR=$PUB/modules/seal
+APP=$PJ/src/Main.as
+Loader=$PJ/src/MainLoading.as
+
+svn update $DIR/chuichui --username rolong --password erlang --no-auth-cache
+
+#chown nobody:nobody $DIR/chuichui -R
+
+$FLEX_SDK/bin/mxmlc --show-actionscript-warnings=true --static-link-runtime-shared-libraries=true --strict=true --locale en_US --debug=true --library-path+=$PJ/src/chuichui --output=$PUB/Main.swf $APP
+$FLEX_SDK/bin/mxmlc --show-actionscript-warnings=true --static-link-runtime-shared-libraries=true --strict=true --locale en_US --debug=true --library-path+=$PJ/lib/ --output=$PUB/MainLoading.swf $Loader
+
+chown nobody:nobody $PUB/Main.swf
+chown nobody:nobody $PUB/MainLoading.swf
+
+~/myserver/set_platform_version.sh

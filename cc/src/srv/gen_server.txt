@@ -1,0 +1,52 @@
+%%----------------------------------------------------
+%% gen_server模块
+%% 
+%% @author Rolong<erlang6@qq.com>
+%%----------------------------------------------------
+-module(srv_xxx).
+-behaviour(gen_server).
+-export([
+        start_link/0
+    ]
+).
+-export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
+-include("common.hrl").
+
+-record(state, {
+        id
+    }
+).
+
+%% --- 对外接口 ---
+
+%% 新建连接
+start_link() ->
+    ?INFO("start ~w...", [?MODULE]),
+    gen_server:start_link(?MODULE, [], []).
+
+%% --- 服务器内部实现 ---
+
+init([]) ->
+    State = #state{},
+    {ok, State}.
+
+handle_call(_Request, _From, State) ->
+    {noreply, State}.
+
+handle_cast(_Msg, State) ->
+    ?ERR("Not matched message: ~w", [_Msg]),
+    {noreply, State}.
+
+handle_info(_Info, State) ->
+    ?ERR("Not matched info: ~w", [_Info]),
+    {noreply, State}.
+
+terminate(_Reason, _State) ->
+    ok.
+
+code_change(_OldVsn, State, _Extra) ->
+    {ok, State}.
+
+%% --- 私有函数 ---
+
+%% vim: set ft=erlang foldmethod=marker foldmarker=%%',%%.:

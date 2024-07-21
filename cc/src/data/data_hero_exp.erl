@@ -1,0 +1,43 @@
+-module(data_hero_exp).
+-export([get/1]).
+get(1) -> [{exp_max, 100}, {exp_sum, 0}];
+get(2) -> [{exp_max, 200}, {exp_sum, 100}];
+get(3) -> [{exp_max, 250}, {exp_sum, 300}];
+get(4) -> [{exp_max, 300}, {exp_sum, 550}];
+get(5) -> [{exp_max, 350}, {exp_sum, 850}];
+get(6) -> [{exp_max, 400}, {exp_sum, 1200}];
+get(7) -> [{exp_max, 450}, {exp_sum, 1600}];
+get(8) -> [{exp_max, 500}, {exp_sum, 2050}];
+get(9) -> [{exp_max, 550}, {exp_sum, 2550}];
+get(10) -> [{exp_max, 600}, {exp_sum, 3100}];
+get(11) -> [{exp_max, 650}, {exp_sum, 3700}];
+get(12) -> [{exp_max, 700}, {exp_sum, 4350}];
+get(13) -> [{exp_max, 750}, {exp_sum, 5050}];
+get(14) -> [{exp_max, 800}, {exp_sum, 5800}];
+get(15) -> [{exp_max, 850}, {exp_sum, 6600}];
+get(16) -> [{exp_max, 900}, {exp_sum, 7450}];
+get(17) -> [{exp_max, 950}, {exp_sum, 8350}];
+get(18) -> [{exp_max, 1000}, {exp_sum, 9300}];
+get(19) -> [{exp_max, 1050}, {exp_sum, 10300}];
+get(20) -> [{exp_max, 1100}, {exp_sum, 11350}];
+get(21) -> [{exp_max, 1150}, {exp_sum, 12450}];
+get(22) -> [{exp_max, 1200}, {exp_sum, 13600}];
+get(23) -> [{exp_max, 1250}, {exp_sum, 14800}];
+get(24) -> [{exp_max, 1300}, {exp_sum, 16050}];
+get(25) -> [{exp_max, 1350}, {exp_sum, 17350}];
+get(26) -> [{exp_max, 1400}, {exp_sum, 18700}];
+get(27) -> [{exp_max, 1450}, {exp_sum, 20100}];
+get(28) -> [{exp_max, 1500}, {exp_sum, 21550}];
+get(29) -> [{exp_max, 1550}, {exp_sum, 23050}];
+get(30) -> [{exp_max, 1600}, {exp_sum, 24600}];
+get(31) -> [{exp_max, 1650}, {exp_sum, 26200}];
+get(32) -> [{exp_max, 1700}, {exp_sum, 27850}];
+get(33) -> [{exp_max, 1750}, {exp_sum, 29550}];
+get(34) -> [{exp_max, 1800}, {exp_sum, 31300}];
+get(35) -> [{exp_max, 1850}, {exp_sum, 33100}];
+get(36) -> [{exp_max, 1900}, {exp_sum, 34950}];
+get(37) -> [{exp_max, 1950}, {exp_sum, 36850}];
+get(38) -> [{exp_max, 2000}, {exp_sum, 38800}];
+get(39) -> [{exp_max, 2050}, {exp_sum, 40800}];
+get(40) -> [{exp_max, 2100}, {exp_sum, 42850}];
+get(_) -> undefined.

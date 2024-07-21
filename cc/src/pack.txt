@@ -1,0 +1,142 @@
+%%----------------------------------------------------
+%% 服务端与客户端通信协议 - 压包规则
+%%  
+%% @author Rolong<erlang6@qq.com>
+%%----------------------------------------------------
+
+{10000, [string]}.
+{10003, [int8, int8, int32, int8]}.
+{10004, [int8]}.
+{10005, [int8]}.
+{11001, [int32, int8, int8, int8, int8, int8]}.
+{11003, [int32, int8, int8, int8, int8, int16, int16]}.
+{11005, [int32, int16, int8, int32]}.
+{11006, [int32, string, int8, int8, int32, int32, int32, int32, int32, int32, int32, int32, int32, int32, int16, int16, int32, string, int32, [int32, int32, int8]]}.
+%% {11007, [[int32, string, int8, int8, int32, int32, int32, int32, int32, int32, int32, int32, int32, int16, int16, int32, string]]}.
+{11008, [int32, int8, int32]}.
+{11009, [int8, int32, int32, int8, int8]}.
+{11013, [int32, int8]}.
+{11015, [int32, int32]}.
+{11017, [int32, int32, int32, int32, int8, int8]}.
+{11018, [int32, int32, int32, int8]}.
+{11019, [int32, int8, int8, int8]}.
+{11020, [int8]}.
+{11022, [int32, string, int8, int8, int32, int32, int32, int32, int32, int32, int32, int32, int32, int32, int16, int16, int32, string, int32, [int32, int32, int8], [int32, int8, int16, int16, int16, int16, int16, int16, int16, int16, int32]]}.
+{11024, [int8, int32]}.
+{11036, [int32, int32, int32]}.
+{11030, [[int8, int32, int8]]}.
+{11037, [int8, int16]}.
+{11038, [int16]}.
+{11040, [int8, int8]}.
+{11041, [int8]}.
+{11044, [int8, int16, int8, int8]}.
+{11045, [int8]}.
+{12003, [int32, string, int16, int16]}.
+{12005, [int32, int8, int8, int8]}.
+{12007, [int32, int8, int8, int8]}.
+{12009, [int32, int32, int32, int8]}.
+{12011, [int32, int8, int8, int8, int8]}.
+{13001, [[int32, int8, string, int8, int8, int8, int8, int8]]}.
+{13003, [int8, int32, int8, string, int8, int8, int8]}.
+{13004, [int8, int32, int8]}.
+{13005, [int32, int8, string]}.
+{13007, [[int32, string, int8, int8]]}.
+{13009, [int8]}.
+{14001, [int32, [int32, int8, int8, string, int8, int8, int32, int32, int32, int32, int8, int8, int32, int32], [int8]]}.
+{14003, [int32, int8, int8, string, int8, int32, int32, int32, int32, int8, int8, int32, int32]}.
+{14004, [int32]}.
+{14005, [int32, int8]}.
+{14008, [int8, int16]}.
+{14009, [int8, int8, [int16], [int32, int8, int16, int16, string, int8, int32, int32, int32, int32, int32, int32, int8, int32, int32, int8, [int32]]]}.
+{14013, [int32]}.
+{14015, [int32]}.
+{14011, [int8]}.
+{14017, [int8, int8, string, string]}.
+{14018, [int8, int8]}.
+{14019, [int16]}.
+{14021, [[int32, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16, int16]]}.
+{14022, [int32, int8]}.
+{14023, [int32]}.
+{14025, [int32, int8]}.
+{14029, [string, int8, int32, int8, int8]}.
+{14031, [int32, int8, int8]}.
+{14037, [int32, int16, int16, int16, int8]}.
+{14012, [int32]}.
+{14033, [int32, int8, int8]}.
+{14039, [int8]}.
+{14050, [int32]}.
+{14053, [int32, int32]}.
+{14060, [int32, int8, int8, int8]}.
+{14063, [int8, int8, [int32, int8, int8]]}.
+{14066, [int8, int32, int32, int32]}.
+{15001, [int32]}.
+{15002, [string]}.
+{15005, [[int32, string]]}.
+{15007, [int32, string, int32, int8]}.
+{15008, [int8, int32, string, int32]}.
+{15011, [int32]}.
+{15015, [string]}.
+{16001, [int8, int8, int8, int8]}.
+{16003, [int32, int8, int8, int8, int8, int8]}.
+{16005, [int32, int32, int32, int8, int8]}.
+{16007, [int32, int8, int8]}.
+{16009, [int32, int8, int8]}.
+{16010, [int32, int8, int8, int8, int8]}.
+{16012, [int32, int32, int8, int8, int8]}.
+{16015, [int8, int8, int8, int8, int8, int8, [int32]]}.
+{17001, [[int8, int32]]}.
+{17002, [[int8, int32]]}.
+{17003, [int32, int8]}.
+{17004, [int32, int32]}.
+{17006, [[int32, int32, int8]]}.
+{17007, [int8, int32, int32, int32]}.
+{17008, [int8, int32]}.
+{17009, [int32, int8, int8]}.
+{17021, [int8]}.
+{17101, [[int32, int32, int8, int8, int8, int16, int16, [int16, int16, int16, int16, int16, int16, int16], int32]]}.
+{17107, [int8]}.
+{17108, [int8, int8]}.
+{17109, [[int32, int8]]}.
+{17103, [int32, int8]}.
+{17111, [int32, int32, int8, int8, int8, int16, int16, int32]}.
+{17113, [int8, int32, int16]}.
+{17114, [int8]}.
+{17115, [int8]}.
+{17116, [int8]}.
+{17117, [int32, int32, int8, int8, int8, int16, int16, [int16, int16, int16, int16, int16, int16, int16], int32]}.
+{17119, [int32, int32, int8]}.
+{17121, [int8]}.
+{17125, [int8]}.
+{17130, [int8, int32, int32, int32, int32, int32]}.
+{17131, [int32, int32, int32, [int32, string, int32, int32]]}.
+{17132, [[int32, string, int32, int32]]}.
+{17140, [int8]}.
+{18001, [int32, string, string, int8, int8]}.
+{18003, [int32, string, string, int8]}.
+{18005, [[int32, string, int16, int8, int8], [int32, string, int16, int8, int8]]}.
+{18007, [int8]}.
+{18008, [int8]}.
+{18009, [int8]}.
+{19001, [[int32, int32, int8, int16, int16, int16, [int8, int32], int8, [int32, int8, int8]]]}.
+{19003, [int32, int8]}.
+{20001, [int8]}.
+{20003, [int8]}.
+{20005, [int32, [int32]]}.
+{21001, [[int32, int32, string, int8, int32,int8]]}.
+{21002, [int8, int8]}.
+{21003, [int8]}.
+{22005, [[int32, string, int32, string, int8, int32, int8]]}.
+{22006, [[int32, string, int8, int8, int32, int8, int8, int32], int32, int8]}.
+{22007, [int8]}.
+{22008, [int8]}.
+{22009, [int8, int32]}.
+{22012, [int32, string]}.
+{22014, [int32, [int32, int32]]}.
+{22015, [int8]}.
+
+{23005, [int32, [int32, int32, float2, int32, float2, int32, float2, int32, float2, int32, float2, int32, float2]]}.
+{23007, [int8]}.
+{23009, [[int32, int32, float2, int32, float2, int32, float2, int32, float2, int32, float2, int32, float2, int8, int32, int32]]}.
+{23011, [int32]}.
+
+%%% vim: set foldmethod=marker filetype=erlang foldmarker=%%',%%.:

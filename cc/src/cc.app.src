@@ -1,0 +1,11 @@
+{application, cc,
+    [
+        {description, "hammergame(cc) game engine"}
+        ,{vsn, "3"}
+        ,{modules, [cc]}
+        ,{registered, [cc_sup]}
+        ,{applications, [kernel, stdlib, sasl]}
+        ,{mod, {cc, []}}
+        ,{start_phases, []}
+    ]
+}.

@@ -1,0 +1,7 @@
+#!/bin/sh
+#rm ebin/*.beam
+#cd ..
+#erl -s make all -s c q
+#!/bin/sh
+escript ./gen_protocol.erl
+./rebar compile

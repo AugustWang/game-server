@@ -1,0 +1,10 @@
+
+=INFO REPORT==== 10-Jul-2013::08:18:47 ===
+    application: os_mon
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 10-Jul-2013::08:18:50 ===
+    application: cc
+    exited: stopped
+    type: temporary
