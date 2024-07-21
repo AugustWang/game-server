@@ -1,0 +1,12 @@
+{application, game_numerical,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { game_numerical_app, []}},
+  {env, []}
+ ]}.

@@ -1,0 +1,14 @@
+source 'http://ruby.taobao.org'
+
+# Rails framework
+gem 'rails', '3.2.9'
+
+# Mysql database driver
+gem 'mysql2', '0.3.14'
+
+# Roo provides an interface to Open Office, Excel, and Google Spreadsheets
+# https://github.com/Empact/roo
+gem "roo", '1.13.2'
+
+# Deploy App to remote servers with git-deploy
+gem 'git-deploy', '0.6.1'
