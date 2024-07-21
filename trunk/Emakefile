@@ -1,0 +1,7 @@
+{"src/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"src/data/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"src/lib/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"src/mod/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"src/pro/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"run/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"doc/*",[{i,"include"}, {outdir, "ebin"}]}.
