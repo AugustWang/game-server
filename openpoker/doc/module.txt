@@ -1,0 +1,51 @@
+1 . ante.erl                              仅仅是开始下注的处理，具体的逻辑在betting中
+2 . barrier.erl                           barrier本意屏障， 原文： The starter pistol fires when this process exits. Run, run, run!!!，没看懂。
+3 . bb.erl                                 Bot launcher ，也是一个gen_server，不知道为什么bot需要launcher
+4 . betting.erl                          Poker betting logic 下注逻辑处理
+5 . bits.erl                               位处理相关操作
+6 . blinds.erl                            处理小盲注，大盲注; 
+7 . bot.erl                                AI，gen_server，用来测试，将来应该能够陪真人玩家来玩。
+8 . counter.erl                         用于把各种计数器（自增、唯一ID）存入mnesia. 目前有3种： 玩家，游客，Game 。
+9 . db.erl                                 数据库操作接口，包括启动，停止服务
+10 . deal_cards.erl                   发牌，其中的private与shared，代表公共牌还是私有牌。这已经是与具体玩法有关的了，而与框架无关。
+11 . deck.erl                            台面，在其上洗牌
+12 . delay.erl                           每一局游戏开始前的倒计时？
+13 . delayed_exit.erl                游戏倒计时到正式开始前偷溜走的相关情况处理。
+14 . dmb.erl                            其中mb=multi bots，机器人。dmb指的是distributed multi bots 分布式
+15 . dumbo.erl                        哑巴机器人：A very dumb bot that knows how to follow a script.
+16 . exch.erl                            自定义behavior，也是一个gen_server，A stack of game modules：玩家&游客
+17 . fixed_limit.erl                    加注、盲注的固定限制
+18 . g.erl                                 Game utility functions
+19 . game.erl                           每一局游戏，本质上是exch.erl。实现了开始，停止，自动计数，Watch the game without joining。
+20 . game_start.erl                  游戏直接开始
+21 . game_wait_players.erl      游戏等待其他玩家到齐后开始
+22 . gateway.erl                      网关节点，没用gen_server
+23 . hand.erl                           用来计算牌型，例如：full housr 就是3带2. 其他参考：http://en.wikipedia.org/wiki/List_of_poker_hands
+24 . id.erl                                固定哈希函数的封装，用来产生进程ID与Key的唯一映射关系。目前没有被引用到。
+25 . ircdb.erl                           模拟玩家数据
+26 . lang.erl                            多语言处理入口，需要完善，目前只有英语
+27 . limit.erl                             各种限制接口，各种limit限制判断主要在game.erl中调用。
+28 . login.erl                            处理用户登录，这里要处理很多中登录方式，正常的，非正常的；离线，在线，重复登陆，断线，忙，恢复用户进程等等。
+29 . mb.erl                              机器人，用于测试
+30 . mbu.erl                            机器人，用于测试
+31 . no_limit.erl                       一局游戏人数上下限
+32 . observer.erl                      Observer bot. Reports game activity. 可以给机器人附加一个观察者职责，用来监视游戏活动状况的
+33 . pickle.erl                          字面意思：腌制
+34 . player.erl                          是个gen_server, 应该是代表玩家的进程，因为在openpoker中，一切的一切都是进程。
+35 . pot.erl                              貌似是奖池，也就是所有已下的赌注的集合。
+36 . pot_limit.erl                      奖池中的加注、盲注限制
+37 . pp.erl                               协议处理，解析 protocol of poker， pp.hrl，是各种协议的定义，客户端的动作(actions: login， seat， win， draw。。。)都由这些协议的解析来实现。
+38 . restart.erl                         NO USE
+39 . schema.erl                       负责创建mnesia中的全部表、游戏配置数据也在其中，其中的populate函数调用了g:setup()，还没研究明白。
+40 . server.erl                          game server，三大节点（gateway, game server, db）之一
+41 . showdown.erl                  摊牌 
+42 . stats.erl                            数据统计:Statistics gathering and reporting server，也是个gen_server
+43 . t.erl                                  debug
+44 . tcp_server.erl                    通用的tcp服务器程序，主要被gateway和server使用，另外也作为客户端连接用。
+45 . test.erl                              测试入口
+46 . tourney.erl                        游客相关处理机制，下同，可以暂时忽略。
+47 . tourney_game_start.erl      ...
+48 . tourney_wait_players.erl    ...
+49 . tourney_wait_timer.erl       ...
+50 . util.erl                              提供3个公用函数： 1.判断进程死活；2.初始化“从”数据库；3. 返回一个随机的进程组成员进程。
+51 . visitor.erl                          怎么也是作为用户正式登陆前的身份呢？这个有疑问，需要研究。
